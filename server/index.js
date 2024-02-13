@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 dotenv.config();
 
 const port = process.env.PORT;
+const mongoURI = process.env.MONGO_URI;
 
 const app = express();
 
@@ -17,6 +18,14 @@ app.get("/", (request, response) => {
   return response.status(234).send("Welcome");
 });
 
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
-});
+mongoose
+  .connect(mongoURI)
+  .then(() => {
+    console.log("Server connected to database");
+    app.listen(port, () => {
+      console.log(`Server started on port ${port}`);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });

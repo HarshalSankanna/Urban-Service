@@ -15,24 +15,7 @@ const app = express();
 //middlewares
 app.use(express.json());
 app.use(cors());
-app.use(cookieParser());
 
-//routes
-app.use("/", authRoute);
-
-app.get("/", (request, response) => {
-  console.log(request);
-  return response.status(234).send("Welcome");
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
 });
-
-mongoose
-  .connect(mongoURI)
-  .then(() => {
-    console.log("Server connected to database");
-    app.listen(port, () => {
-      console.log(`Server started on port ${port}`);
-    });
-  })
-  .catch((error) => {
-    console.log(error);
-  });

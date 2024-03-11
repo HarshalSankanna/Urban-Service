@@ -22,9 +22,6 @@ export default function About() {
                             The platform allows users to find and hire "Taskers" to perform a wide range of services, such as household chores,
                             moving assistance, handyman tasks, virtual assistance, event planning, and much more.
                         </p>
-                        <p className="mt-4 text-gray-600">
-                            Thank You!
-                        </p>
                     </div>
                 </div>
             </div>

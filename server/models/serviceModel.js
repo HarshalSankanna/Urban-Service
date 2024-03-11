@@ -26,20 +26,6 @@ const serviceSchema = mongoose.Schema({
     ref: "User",
     required: true,
   },
-  availability: {
-    days: {
-      type: [String],
-      required: true,
-    },
-    startTime: {
-      type: String,
-      required: true,
-    },
-    endTime: {
-      type: String,
-      required: true,
-    },
-  },
 });
 
-export const Service = mongoose.model("Service", serviceSchema);
+export default mongoose.model("Service", serviceSchema);

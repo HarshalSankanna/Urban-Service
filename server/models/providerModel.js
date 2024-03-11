@@ -21,12 +21,8 @@ const providerSchema = mongoose.Schema(
         ref: "Service",
       },
     ],
-    phoneNumber: {
-      type: Number,
-      required: true,
-    },
   },
   { timestamps: true }
 );
 
-export const Provider = mongoose.model("Provider", providerSchema);
+export default mongoose.model("Provider", providerSchema);

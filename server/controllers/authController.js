@@ -18,7 +18,8 @@ export const Signup = async (req, res, next) => {
     res
       .status(201)
       .json({ message: "User signed in successfully", success: true, user });
-    next();
+
+    res.redirect("/login");
   } catch (error) {
     console.error(error);
   }

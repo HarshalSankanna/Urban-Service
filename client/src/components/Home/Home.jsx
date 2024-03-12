@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -11,10 +12,10 @@ export default function Home() {
                             Assembly
                             <span className="font-light font-sans sm:text-2xl bg-white text-black" /* Add font-normal class here */>
                                 <ul>
-                                    <li>
+                                    <li className='Text-color'>
                                         Assemble or disassemble furniture items by unboxing, building, and any cleanup.
                                     </li>
-                                    <li>
+                                    <li className='Text-color'>
                                         Now Trending: Curved sofas, computer desks, and sustainable materials.
                                     </li>
                                 </ul>

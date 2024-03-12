@@ -9,6 +9,8 @@ import About from './components/About/About.jsx'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
 import Services from './components/Services/Services.jsx'
+import Login from './components/Login/Login.jsx'
+import Signup from './components/Signup/Signup.jsx'
 
 
 // const router = createBrowserRouter([
@@ -40,6 +42,11 @@ const router = createBrowserRouter(
       <Route path='contact' element={<Contact />} />
       <Route path='user/:userid' element={<User />} />
       <Route path='services' element={<Services />} />
+      <Route path='login' element={<Login />} />
+      <Route path='signup' element={<Signup />} />
+
+
+
 
       
     </Route>

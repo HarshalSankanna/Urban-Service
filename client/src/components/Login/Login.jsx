@@ -18,7 +18,7 @@ export default function Login() {
                 password,
             });
             console.log(response.data);
-            navigate('/'); // Assuming '/dashboard' is the route to redirect to after login
+            navigate('/'); 
         } catch (error) {
             console.error(error);
         }

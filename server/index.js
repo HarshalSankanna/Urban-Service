@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser";
 dotenv.config();
 
 import authRoute from "./routes/authRoutes.js";
+import serviceRoute from "./routes/serviceRoutes.js";
 
 const port = process.env.PORT;
 const mongoURI = process.env.MONGO_URI;
@@ -19,6 +20,7 @@ app.use(cookieParser());
 
 //routes
 app.use("/", authRoute);
+app.use("/", serviceRoute);
 
 app.get("/", (request, response) => {
   console.log(request);
